@@ -1,0 +1,30 @@
+.profileManagement {
+  font-size: 18px;
+  float: right;
+  text-align: center;
+  font-family: "Kalam";
+  font-weight: bold;
+  background-image: repeating-radial-gradient(white,  gold);
+  border-radius: 25px; 
+  padding: 10px;
+}
+
+/* changing color of create account and sign in links */
+#createAccount, #signIn {
+  color: #F5006C;
+  padding: 5px;
+}
+
+#createAccount:hover, #signIn:hover {
+  text-decoration:none;
+  text-shadow: 0 0 2px #999;
+}
+
+#createAccount:hover span, #signIn:hover span {
+  cursor: pointer
+}
+
+/* active means the moment it's clicked and here it provides visual feedback that the link was clicked*/
+#createAccount:active, #signIn:active {
+  padding-top: 2px;
+}

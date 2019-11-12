@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!--page setup stuff common to all pages (w/ different page title)-->
+  <title>Chatr - Chat Room</title>
+  <link rel="shortcut icon" type="image/png" href="images/finallips.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--importing stylesheets common to most pages-->
+  <link rel="stylesheet" href="styles/importFonts.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="styles/profileAccess.css" />
+  <link rel="stylesheet" type="text/css" href="styles/header.css" />
+  <link rel="stylesheet" type="text/css" href="styles/footer.css" />
+  <!--CSS & JS specific to this page-->
+  <link rel="stylesheet" href="styles/chatRoom.css" type="text/css">
+  <script src="scripts/chatRoom.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+  <div class='content'>
+    <div class="profileManagement">
+      <a id="createAccount" href="createAccount.html">New Account</a><br>
+      <a>or</a><br>
+      <a id="signIn" href="signIn.html">Sign In</a><br>
+    </div>
+
+    <div class="header">
+      <img class="logo" src="images/ChatrCropped.png" alt="Chatter logo">
+      <div class="navbar">
+        <a href="chatrIndex.html">Home</a>
+        <a href="chatRoom.html">Chat Room</a>
+        <a href="inspiration.html">Inspiration</a>
+        <a href="aboutUs.html">About Us</a>
+      </div>
+    </div>
+
+    <div class="forum">
+
+      <!--the row with the forum title-->
+      <div class="forumHeader">
+        <div class="forumHeaderText">
+          <p id="forumTitle">General Forum</p>
+          <p id="noPosts">There are no posts yet. Add one via the box in the bottom left corner of the screen.</p>
+        </div>
+      </div>
+
+<!--To make more posts: copy/paste a postBox, change all identifying #s mentioned in post's HTML, then set postsAvailable in JS to the number of posts-->
+      <!--Post 0-->
+      <div id="postBox0" class="postBoxes">
+        <div id="user">
+          <img class="userImage" src="images/userPlaceholder.png">
+          <div class="usernames">  User_1</div>
+        </div>
+        <div class="postAndComments">
+          <div class="post">
+            <a id="textSpace0" class="textSpaces"></a>
+            <span class='material-icons  thumbsUpButton' id='like0'>thumb_up</span>
+            <span class='material-icons  thumbsDownButton' id='dislike0'>thumb_down</span>
+          </div>
+          <p></p>
+          <!--comments box-->
+          <div id="commentList0" class="commentListBoxes">
+            <div class="commentHeading">Comment below on this post</div>
+            <div id="commentInputRow">
+            <input type="text" id="commentBox0" placeholder="Type a comment...">
+            <button class="sendButton" onclick="sendComments(0)">Send Comment</button>
+            <!-- you give something multiple classes by adding a space, not another "class=''" -->
+            <span><button class='material-icons  thumbsUpButton' onclick="thumbsUp(0)">thumb_up</button></span>
+            <span><button class='material-icons  thumbsDownButton' onclick="thumbsDown(0)">thumb_down</button></span>
+            </div>
+            <p></p>
+          </div>
+          <!-- close postAndComments div 0 -->
+        </div>
+        <!-- close div housing post 0-->
+      </div>
+
+      <!--Post 1-->
+      <div id="postBox1" class="postBoxes">
+          <div id="user">
+            <img class="userImage" src="images/userPlaceholder.png">
+            <div class="usernames">  User_1</div>
+          </div>
+          <div class="postAndComments">
+            <div class="post">
+              <a id="textSpace1" class="textSpaces"></a>
+              <span class='material-icons  thumbsUpButton' id='like1'>thumb_up</span>
+              <span class='material-icons  thumbsDownButton' id='dislike1'>thumb_down</span>
+            </div>
+            <p></p>
+            <!--comments box-->
+            <div id="commentList1" class="commentListBoxes">
+              <div class="commentHeading">Comment below on this post</div>
+              <div id="commentInputRow">
+              <input type="text" id="commentBox1" placeholder="Type a comment...">
+              <button class="sendButton" onclick="sendComments(1)">Send Comment</button>
+              <!-- you give something multiple classes by adding a space, not another "class=''" -->
+              <span><button class='material-icons  thumbsUpButton' onclick="thumbsUp(1)">thumb_up</button></span>
+              <span><button class='material-icons  thumbsDownButton' onclick="thumbsDown(1)">thumb_down</button></span>
+              </div>
+              <p></p>
+            </div>
+            <!-- close postAndComments div 1 -->
+          </div>
+          <!-- close div housing post 1-->
+        </div>
+
+<!--Post 2-->
+<div id="postBox2" class="postBoxes">
+    <div id="user">
+      <img class="userImage" src="images/userPlaceholder.png">
+      <div class="usernames">  User_1</div>
+    </div>
+    <div class="postAndComments">
+      <div class="post">
+        <a id="textSpace2" class="textSpaces"></a>
+        <span class='material-icons  thumbsUpButton' id='like2'>thumb_up</span>
+        <span class='material-icons  thumbsDownButton' id='dislike2'>thumb_down</span>
+      </div>
+      <p></p>
+      <!--comments box-->
+      <div id="commentList2" class="commentListBoxes">
+        <div class="commentHeading">Comment below on this post</div>
+        <div id="commentInputRow">
+        <input type="text" id="commentBox2" placeholder="Type a comment...">
+        <button class="sendButton" onclick="sendComments(2)">Send Comment</button>
+        <!-- you give something multiple classes by adding a space, not another "class=''" -->
+        <span><button class='material-icons  thumbsUpButton' onclick="thumbsUp(2)">thumb_up</button></span>
+        <span><button class='material-icons  thumbsDownButton' onclick="thumbsDown(2)">thumb_down</button></span>
+        </div>
+        <p></p>
+      </div>
+      <!-- close postAndComments div 2-->
+    </div>
+    <!-- close div housing post 2-->
+  </div>
+
+      <!--closes the div that separates the forums from the header-->
+    </div>
+    <!-- closes the content class div -->
+  </div>
+
+  <footer class="chatrFooter">
+    <div>2018 Chatr</div>
+  </footer>
+
+  <footer id="chatRoomFooter">
+    <div id="postFooter">
+      <a id="postTitle">Post</a>
+      <input type="text" id="enteredPost" name="text" placeholder="Enter your own post...">
+      <button class='sendButton' onclick="post()">Send Post</button>
+      <span><button class='material-icons' id='postMicButton' onclick="brokenPostButtonClicked('audio recordings')">mic</button></span>
+      <span><button class='material-icons' id='postPicButton' onclick="brokenPostButtonClicked('pictures')">insert_photo</button></span>
+      <span><button class='material-icons' id='postLinkButton' onclick="brokenPostButtonClicked('links')">insert_link</button></span>
+    </div>
+    <div class="forumTopicsList">
+      <div id="forumTopicsListTitle">Forums:</div>
+      <a id="forumTopic">General</a>
+      <a id="forumTopic" onclick="forumTopicClicked('Friends')">Friends</a>
+      <a id="forumTopic" onclick="forumTopicClicked('Family')">Family</a>
+      <a id="forumTopic" onclick="forumTopicClicked('Relationships')">Relationships</a>
+      <a id="forumTopic" href="https://docs.google.com/forms/d/e/1FAIpQLSetuyt_grz53fNgZhr5Bq1KWreBKpjCT5vSx2xK2xH9D2fP1g/viewform">SUGGEST
+      </a>
+    </div>
+    <!-- <div class="search-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="#hashtag" name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div> -->
+  </footer>
+</body>
+
+</html>

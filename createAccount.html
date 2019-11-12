@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!--page setup stuff common to all pages (w/ different page title)-->
+  <title>Chatr - Create Account</title>
+  <link rel="shortcut icon" type="image/png" href="images/finallips.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--importing stylesheets common to most pages-->
+  <link rel="stylesheet" href="styles/importFonts.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="styles/profileAccess.css" />
+  <link rel="stylesheet" type="text/css" href="styles/header.css" />
+  <link rel="stylesheet" type="text/css" href="styles/footer.css" />
+  <!--CSS & JS specific to this page-->
+  <link rel="stylesheet" href="styles/createAccount.css">
+  <script src="scripts/createAccount.js"></script>
+
+</head>
+
+<body>
+
+
+  <div class='content'>
+    <div class='content'>
+      <div class="header">
+        <img class="logo" src="images/ChatrCropped.png" alt="Chatter logo">
+        <div class="navbar">
+          <a href="chatrIndex.html">Home</a>
+          <!--need to put in link urls-->
+          <a href="chatRoom.html">Chat Room</a>
+          <a href="inspiration.html">Inspiration</a>
+          <a href="aboutUs.html">About Us</a>
+        </div>
+      </div>
+
+      <div class="text">
+        <h1>Create an Account</h1>
+        <form>
+          <p>Username: <input type="text" id="newUsernameBox"></p>
+          <p>Password: <input type="password" id="newPwdBox"></p>
+          <p>Email: <input type="email" id="newEmailBox"></p>
+          <p><input type="checkbox" id="consent" value="True">I consent to Chatr contacting me via the email above.<br></p>
+          <p><input type="submit" value="Create My Account" onClick="createAccount(event)"></p>
+        </form>
+        <p>Or sign into an existing account <a href="signIn.html">here</a></p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="chatrFooter">
+    <div>2018 Chatr</div>
+  </footer>
+
+</body>
+
+</html>

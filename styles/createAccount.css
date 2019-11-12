@@ -1,0 +1,20 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: url(backgrounds/bunting-flag.png);
+  display: flex;
+  flex-direction: column;
+  font-family: "Bree Serif";
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.text {
+  text-align: center;
+  vertical-align: center;
+}

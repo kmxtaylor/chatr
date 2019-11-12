@@ -1,0 +1,64 @@
+html,
+body {
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+body {
+  background-color: #e6e6fa;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  position: fixed;
+  top: 158px;
+  left: 5px;
+  font-family: "Salsa";
+  font-size: 18px;
+  background-color: rgb(117, 192, 226);
+  border-color: rgb(25, 240, 255);
+  border-width: 5px;
+  padding: 10px;
+  border-radius: 30%;
+}
+
+/* to do: create four equal columns that sit next to each other */
+.column {
+  width: 50%;
+}
+
+/* .imagesContainer {
+  display: grid;
+} */
+
+.imagesContainer img {
+  width: 520px;
+  height: 600px;
+  margin-left: 80px;
+  margin-top: 20px;
+  vertical-align: middle;
+  border-radius: 25px;
+}
+
+.hiddenImage {
+  display: none;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}

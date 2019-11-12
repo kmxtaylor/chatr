@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!--page setup stuff common to all pages (w/ different page title)-->
+  <title>Chatr - Sign In</title>
+  <link rel="shortcut icon" type="image/png" href="images/finallips.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--importing stylesheets common to most pages-->
+  <link rel="stylesheet" href="styles/importFonts.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="styles/profileAccess.css" />
+  <link rel="stylesheet" type="text/css" href="styles/header.css" />
+  <link rel="stylesheet" type="text/css" href="styles/footer.css" />
+  <!--CSS & JS specific to this page-->
+  <link rel="stylesheet" type="text/css" href="styles/signIn.css">
+  <script src="scripts/signIn.js"></script>
+
+</head>
+
+<body>
+
+  <div class="content">
+    <div class="header">
+      <img class="logo" src="images/ChatrCropped.png" alt="Chatter logo">
+      <div class="navbar">
+        <a href="chatrIndex.html">Home</a>
+        <!--need to put in link urls-->
+        <a href="chatRoom.html">Chat Room</a>
+        <a href="inspiration.html">Inspiration</a>
+        <a href="aboutUs.html">About Us</a>
+      </div>
+    </div>
+    <div class="text">
+      <h1>Sign In</h1>
+      <form>
+        <p>Username: <input type="text" id="usernameSignInBox"></p>
+        <p>Password: <input type="password" id="passwordSignInBox"></p>
+        <p><input type="submit" value="Sign In" onclick="signInCheck()" /></p>
+        <p>Or create a new account <a href="createAccount.html">here</a></p>
+      </form>
+    </div>
+  </div>
+
+  <footer class="chatrFooter">
+    <div>2018 Chatr</div>
+  </footer>
+
+</body>
+
+</html>

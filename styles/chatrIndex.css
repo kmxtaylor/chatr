@@ -1,0 +1,188 @@
+/* "*" selects all elements and if you put a tag before the *, it selects all elements within that tag */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: url(backgrounds/jade.jpg);
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+/* Slideshow container */
+.slideshowContainer {
+  position: relative;
+  margin: auto;
+}
+
+.mySlides > img {
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.affirmation {
+  color: black;
+  font-size: 60px;
+  font-family: "Kalam";
+  font-weight: bold;
+  animation: blinkingText 4s infinite;
+  position: absolute;
+  /* centers text */
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap; /*keeps the text on a single line*/
+}
+
+@keyframes blinkingText {
+  /* must be structured in 4 steps like this in order to have smooth transitions and even timing*/
+  0% {
+    color: transparent;
+  }
+  33% {
+    color: black;
+  }
+  67% {
+    color: black;
+  }
+  100% {
+    color: transparent;
+  }
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.first {
+  display: inline;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: black;
+  background-color: azure;
+  font-family: "Kalam";
+  font-size: 16px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots indicating position in the slideshow*/
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgb(124, 124, 124);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #4d4c4c;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.belowSlideshow {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+.belowSlideshow img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#indexQuote {
+  font-style: italic;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 50px;
+  border: none;
+  font: normal 60px/1 "Monoton", Helvetica, sans-serif;
+  color: #8615c7;
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  text-shadow: 0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255),
+    0 0 30px rgb(255, 255, 255), 0 0 40px rgb(188, 88, 255),
+    0 0 70px rgb(188, 88, 255), 0 0 80px rgb(188, 88, 255),
+    0 0 100px rgb(188, 88, 255), 0 0 150px rgb(188, 88, 255);
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
+#indexQuote:hover {
+  text-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px black, 0 0 20px black,
+    0 0 35px black, 0 0 40px black, 0 0 50px black, 0 0 75px black;
+}

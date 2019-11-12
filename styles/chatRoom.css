@@ -1,0 +1,248 @@
+html,
+body {
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 450px;
+  background-color: #ffe4e1;
+  height: 100vh;
+  margin: 0;
+  background: radial-gradient(
+    circle,
+    darken(dodgerblue, 10%),
+    #1f4f96,
+    #1b2949,
+    #000
+  );
+  background-image: url(backgrounds/plaid.jpg);
+}
+
+#forumTitle {
+  text-align: center;
+  font-family: "Abril Fatface";
+  font-size: 35px;
+}
+
+#noPosts {
+  text-align: center;
+  font-family: "Helvetica";
+  font-size: 25px;
+}
+
+.forum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.postBoxes {
+  display: none;
+  background-color: #f4c2c2;
+  border-style: solid;
+  border-color: #9370db;
+  width: 65%;
+  padding: 40px;
+  padding-left: 10px;
+  border-radius: 25px;
+  margin-bottom: 50px;
+}
+
+#user {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.userImage {
+  width: 90px;
+  height: 75px;
+  border-radius: 50%;
+  min-height: 0px;
+  min-width: 0px;
+  float: left;
+}
+
+.usernames {
+  padding-bottom: 30px;
+  font-size: 40px;
+  padding-left: 20px;
+  margin-left: -40px;
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 180px;
+  /* padding: 60px 0 0; */
+  border: none;
+  /* font: normal 40px/0.65 "Squada One", Helvetica, sans-serif; */
+  font-family: "Concert One", cursive;
+  color: black;
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  text-shadow: 8px 5px 0 rgba(188, 188, 188, 1);
+  margin-top: 10px;
+}
+
+.postAndComments {
+  float: right;
+  width: 90%;
+  border-radius: 25px;
+}
+
+.post {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  border-style: solid;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.textSpaces {
+  font-family: "Teko", sans-serif;
+}
+
+.commentHeading {
+  padding-bottom: 15px;
+  font-weight: bold;
+  font-family: "ABeeZee", sans-serif;
+}
+
+.commentListBoxes {
+  display: flex;
+  flex-direction: column;
+}
+
+#commentInputRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.commentMessage {
+  border-style: solid;
+  padding: 15px;
+  border-radius: 25px;
+  font-family: "Teko", sans-serif;
+}
+
+.thumbsUpButton, .thumbsDownButton {
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.thumbsUpButton, #postLinkButton {
+  color: green;
+}
+
+.thumbsDownButton, #postMicButton {
+  color: red;
+}
+
+@media screen and (max-width: 600px) {
+  /* .topnav .search-container {
+    float: none;
+  } */
+  .topnav a,
+  .topnav input[type="text"],
+  .topnav {
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+#chatRoomFooter {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+}
+
+#postFooter {
+  border: 2px solid #8b008b;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffe4b5;
+  color: white;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+#postFooter:focus {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+
+#postTitle {
+  font-family: "Abril Fatface";
+  font-weight: bold;
+  font-size: 24px;
+  color: purple;
+  padding-right: 12px;
+}
+
+.sendButton{
+  font-family: "Sansita";
+  font-weight: bold;
+  font-size: 21px;
+}
+
+#postPicButton {
+  color: blue;
+}
+
+.forumTopicsList {
+  display: flex;
+  text-align: center;
+  flex-wrap: nowrap;
+  z-index: 1;
+  background: #fa8072;
+  font-size: 20px;
+}
+
+/* Clear floats after the columns */
+.forumTopicsList:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#forumTopicsListTitle {
+  text-decoration: underline;
+  color: black;
+  font-weight: bold;
+  font-family: "Oleo Script";
+  padding: 10px;
+}
+
+/* padding: top right bottom left */
+#forumTopic {
+  padding: 11px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  font-family: "Oleo Script";
+  float: right;
+  width: 100%;
+}
+
+#forumTopic:hover {
+  color: #064579;
+}
